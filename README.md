@@ -25,18 +25,31 @@ FreneticFocus is a custom WordPress theme designed for comprehensive management 
 
 
 /freneticfocus
+
 ├── footer.php           # Footer template
+
 ├── front-page.php       # Custom homepage template
+
 ├── functions.php        # Theme functions & hooks
+
 ├── header.php           # Header template
+
 ├── index.php            # Default template
+
 ├── page.php             # Generic page template
+
 ├── content-page.php     # Content template for pages
+
 ├── style.css            # Main stylesheet & theme metadata
+
 ├── main.js              # JavaScript functionality
+
 └── assets/
+
     ├── css/             # Additional stylesheets
+
     ├── js/              # Additional JavaScript files
+    
     ├── images/          # Theme assets & placeholders
 
 
