@@ -1,0 +1,49 @@
+/**
+ * FreneticFocus Admin Styles
+ */
+
+/* Service Post Type Admin Styles */
+.post-type-service .service-icon-preview {
+    font-size: 48px;
+    margin-top: 10px;
+}
+
+/* Meta Box Styles */
+#service_details .inside {
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+#service_details label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#service_details input[type="text"] {
+    margin-bottom: 15px;
+}
+
+#service_details .description {
+    color: #666;
+    font-style: italic;
+}
+
+/* Theme Settings Pages */
+.freneticfocus-theme-settings {
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.freneticfocus-theme-settings h1 {
+    margin-bottom: 20px;
+}
+
+.freneticfocus-theme-settings .nav-tab-wrapper {
+    margin-bottom: 20px;
+}
+
+.freneticfocus-theme-settings .form-table th {
+    width: 200px;
+}

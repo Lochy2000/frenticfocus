@@ -1,0 +1,65 @@
+/**
+ * FreneticFocus Customizer Styles
+ */
+
+/* Section Descriptions */
+#customize-controls .customize-section-description {
+    margin-bottom: 15px;
+}
+
+/* Control Styles */
+#customize-controls .customize-control {
+    margin-bottom: 15px;
+}
+
+#customize-controls .customize-control-title {
+    margin-bottom: 5px;
+}
+
+/* Section Titles */
+#customize-controls .accordion-section-title {
+    font-weight: 600;
+}
+
+/* Image Controls */
+#customize-controls .customize-control-image .current {
+    margin-bottom: 8px;
+}
+
+/* Color Controls */
+#customize-controls .wp-picker-container .wp-color-result.button {
+    height: 24px;
+}
+
+/* Description Text */
+#customize-controls .customize-control-description {
+    font-style: italic;
+    margin-top: 3px;
+}
+
+/* Input Fields */
+#customize-controls input[type=text],
+#customize-controls input[type=url],
+#customize-controls input[type=email],
+#customize-controls input[type=number],
+#customize-controls textarea {
+    width: 100%;
+}
+
+/* Specific Section Styling */
+#accordion-section-freneticfocus_hero_section .customize-control,
+#accordion-section-freneticfocus_about_section .customize-control,
+#accordion-section-freneticfocus_services_section .customize-control,
+#accordion-section-freneticfocus_cta_section .customize-control,
+#accordion-section-freneticfocus_footer_section .customize-control {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+#accordion-section-freneticfocus_hero_section .customize-control:last-child,
+#accordion-section-freneticfocus_about_section .customize-control:last-child,
+#accordion-section-freneticfocus_services_section .customize-control:last-child,
+#accordion-section-freneticfocus_cta_section .customize-control:last-child,
+#accordion-section-freneticfocus_footer_section .customize-control:last-child {
+    border-bottom: none;
+}
