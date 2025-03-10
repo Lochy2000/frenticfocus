@@ -125,7 +125,7 @@ function freneticfocus_customize_register($wp_customize) {
 
     // About Image
     $wp_customize->add_setting('about_image', array(
-        'default' => get_template_directory_uri() . '/assets/images/about-image.jpg',
+        'default' => get_template_directory_uri() . '/assets/images/about-image.png',
         'sanitize_callback' => 'esc_url_raw',
     ));
 
@@ -242,6 +242,165 @@ function freneticfocus_customize_register($wp_customize) {
         'label' => __('Button URL', 'freneticfocus'),
         'section' => 'freneticfocus_services_section',
         'type' => 'url',
+    ));
+
+    /*****************************************
+     * Services Page Section
+     *****************************************/
+    $wp_customize->add_section('freneticfocus_services_page_section', array(
+        'title' => __('Services Page', 'freneticfocus'),
+        'priority' => 55,
+    ));
+
+    // Services Hero Background Image
+    $wp_customize->add_setting('services_hero_background_image', array(
+        'default' => get_template_directory_uri() . '/assets/images/services-hero.jpg',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'services_hero_background_image', array(
+        'label' => __('Services Hero Background Image', 'freneticfocus'),
+        'section' => 'freneticfocus_services_page_section',
+        'settings' => 'services_hero_background_image',
+    )));
+
+    // Services Page Title
+    $wp_customize->add_setting('services_page_title', array(
+        'default' => 'Our Services',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('services_page_title', array(
+        'label' => __('Services Page Title', 'freneticfocus'),
+        'section' => 'freneticfocus_services_page_section',
+        'type' => 'text',
+    ));
+
+    // Services Page Subtitle
+    $wp_customize->add_setting('services_page_subtitle', array(
+        'default' => 'Specialized solutions designed to meet your unique business needs',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('services_page_subtitle', array(
+        'label' => __('Services Page Subtitle', 'freneticfocus'),
+        'section' => 'freneticfocus_services_page_section',
+        'type' => 'text',
+    ));
+
+    // Services Page Button Text
+    $wp_customize->add_setting('services_page_button_text', array(
+        'default' => 'Explore Our Services',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('services_page_button_text', array(
+        'label' => __('Button Text', 'freneticfocus'),
+        'section' => 'freneticfocus_services_page_section',
+        'type' => 'text',
+    ));
+
+    // Services Images
+    $services = array(
+        'change_management' => 'Change Management',
+        'program_management' => 'Program Management',
+        'redili' => 'Real Estate Digital Literacy',
+        'cx_mapping' => 'Customer Journey Mapping',
+        'm365_adoption' => 'M365 Adoption'
+    );
+
+    foreach ($services as $service_key => $service_name) {
+        $wp_customize->add_setting($service_key . '_image', array(
+            'default' => get_template_directory_uri() . '/assets/images/' . $service_key . '.jpg',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, $service_key . '_image', array(
+            'label' => sprintf(__('%s Image', 'freneticfocus'), $service_name),
+            'section' => 'freneticfocus_services_page_section',
+            'settings' => $service_key . '_image',
+        )));
+    }
+
+    /*****************************************
+     * Contact Page Section
+     *****************************************/
+    $wp_customize->add_section('freneticfocus_contact_page_section', array(
+        'title' => __('Contact Page', 'freneticfocus'),
+        'priority' => 65,
+    ));
+
+    // Contact Hero Background Image
+    $wp_customize->add_setting('contact_hero_background_image', array(
+        'default' => get_template_directory_uri() . '/assets/images/contact-hero.jpg',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'contact_hero_background_image', array(
+        'label' => __('Contact Hero Background Image', 'freneticfocus'),
+        'section' => 'freneticfocus_contact_page_section',
+        'settings' => 'contact_hero_background_image',
+    )));
+
+    // Contact Page Title
+    $wp_customize->add_setting('contact_page_title', array(
+        'default' => 'Get in Touch',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('contact_page_title', array(
+        'label' => __('Contact Page Title', 'freneticfocus'),
+        'section' => 'freneticfocus_contact_page_section',
+        'type' => 'text',
+    ));
+
+    // Contact Page Subtitle
+    $wp_customize->add_setting('contact_page_subtitle', array(
+        'default' => 'Have a question or want to work together? Reach out to us today.',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('contact_page_subtitle', array(
+        'label' => __('Contact Page Subtitle', 'freneticfocus'),
+        'section' => 'freneticfocus_contact_page_section',
+        'type' => 'text',
+    ));
+
+    // Contact Info Title
+    $wp_customize->add_setting('contact_info_title', array(
+        'default' => 'Contact Information',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('contact_info_title', array(
+        'label' => __('Contact Info Title', 'freneticfocus'),
+        'section' => 'freneticfocus_contact_page_section',
+        'type' => 'text',
+    ));
+
+    // Contact Info Description
+    $wp_customize->add_setting('contact_info_description', array(
+        'default' => 'We\'d love to hear from you. Fill out the form or reach out through any of the channels below.',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('contact_info_description', array(
+        'label' => __('Contact Info Description', 'freneticfocus'),
+        'section' => 'freneticfocus_contact_page_section',
+        'type' => 'textarea',
+    ));
+
+    // Contact Form 7 ID
+    $wp_customize->add_setting('contact_form_id', array(
+        'default' => '',
+        'sanitize_callback' => 'absint',
+    ));
+
+    $wp_customize->add_control('contact_form_id', array(
+        'label' => __('Contact Form 7 ID', 'freneticfocus'),
+        'description' => __('Enter the ID of the Contact Form 7 form to display on the contact page.', 'freneticfocus'),
+        'section' => 'freneticfocus_contact_page_section',
+        'type' => 'number',
     ));
 
     /*****************************************

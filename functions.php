@@ -128,8 +128,10 @@ function freneticfocus_widgets_init() {
 }
 add_action('widgets_init', 'freneticfocus_widgets_init');
 
+
 /**
  * Enqueue scripts and styles.
+ * 
  */
 function freneticfocus_scripts() {
     // Enqueue Google Fonts
@@ -138,10 +140,29 @@ function freneticfocus_scripts() {
     // Main stylesheet
     wp_enqueue_style('freneticfocus-style', get_stylesheet_uri(), array(), FRENETICFOCUS_VERSION);
     
+    // Base styles (global styles, layout, typography)
+    wp_enqueue_style('freneticfocus-base', FRENETICFOCUS_URI . '/assets/css/base.css', array(), FRENETICFOCUS_VERSION);
+    
+    // Navigation styles
+    wp_enqueue_style('freneticfocus-navigation', FRENETICFOCUS_URI . '/assets/css/navigation.css', array(), FRENETICFOCUS_VERSION);
+    
     // Custom styles - all theme-specific styles moved here
     wp_enqueue_style('freneticfocus-custom', FRENETICFOCUS_URI . '/assets/css/custom.css', array(), FRENETICFOCUS_VERSION);
+    
+    // Services page styles
+    if (is_page_template('page-services.php')) {
+        wp_enqueue_style('freneticfocus-services', FRENETICFOCUS_URI . '/assets/css/services.css', array(), FRENETICFOCUS_VERSION);
+    }
+    
+    // Contact page styles
+    if (is_page_template('page-contact.php')) {
+        wp_enqueue_style('freneticfocus-contact', FRENETICFOCUS_URI . '/assets/css/contact.css', array(), FRENETICFOCUS_VERSION);
+    }
 
-    // Theme main JS
+    // Header JavaScript
+    wp_enqueue_script('freneticfocus-header', FRENETICFOCUS_URI . '/js/header.js', array(), FRENETICFOCUS_VERSION, true);
+    
+    // Theme main JS - handles general functionality
     wp_enqueue_script('freneticfocus-main', FRENETICFOCUS_URI . '/js/main.js', array('jquery'), FRENETICFOCUS_VERSION, true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {

@@ -1,0 +1,143 @@
+/**
+ * FreneticFocus Navigation Styles
+ */
+
+/* Header and Navigation Styles */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 30px 0;
+    transition: all 0.4s ease;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles */
+.logo {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: white; /* Logo starts as white */
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.4s ease;
+}
+
+header.scrolled .logo {
+    color: #333; /* Logo changes to dark on scroll */
+}
+
+/* Custom Logo (image) styles */
+.custom-logo-link img.custom-logo {
+    max-height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1); /* Makes logo white */
+    transition: filter 0.4s ease;
+}
+
+header.scrolled .custom-logo-link img.custom-logo {
+    filter: none; /* Returns to original colors */
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul,
+#primary-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li,
+#primary-menu li {
+    margin-left: 40px;
+}
+
+nav ul li a,
+#primary-menu li a {
+    text-decoration: none;
+    color: white; /* Menu items start as white */
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative;
+}
+
+header.scrolled nav ul li a,
+header.scrolled #primary-menu li a {
+    color: #333; /* Menu items change to dark on scroll */
+}
+
+nav ul li a::after,
+#primary-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white; /* Underline starts as white */
+    transition: width 0.3s, background-color 0.3s;
+}
+
+header.scrolled nav ul li a::after,
+header.scrolled #primary-menu li a::after {
+    background-color: #333; /* Underline changes to dark on scroll */
+}
+
+nav ul li a:hover::after,
+#primary-menu li a:hover::after,
+nav ul li.current-menu-item a::after,
+#primary-menu li.current-menu-item a::after {
+    width: 100%;
+}
+
+/* Current page highlight */
+nav ul li.current-menu-item a,
+#primary-menu li.current-menu-item a {
+    position: relative;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+    
+    nav {
+        margin-top: 20px;
+    }
+    
+    nav ul,
+    #primary-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li,
+    #primary-menu li {
+        margin: 0 15px;
+        margin-bottom: 10px;
+    }
+}

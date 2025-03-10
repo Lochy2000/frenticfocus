@@ -94,7 +94,7 @@ get_header();
                     <div class="service-icon">⟳</div>
                     <h3>Change Management</h3>
                     <p>Helping organizations navigate the complexities of transformation and innovation with strategic guidance and hands-on support.</p>
-                    <a href="services.html#change-management">Learn More →</a>
+                    <a href="' . esc_url(home_url('/services/')) . '">Services</a>
                 </div>
                 
                 <div class="service-card">
