@@ -30,9 +30,10 @@ get_header();
         <div class="about-content">
             <div class="about-text">
                 <?php
-                $about_content = get_theme_mod('about_content', '<p>Lara van Rooyen provides comprehensive and innovative workshops and focus to businesses and individuals seeking to enhance their digital literacy and operational efficiency. Based in Stockholm and Nice, she specializes in a variety of management services tailored to meet the diverse needs of clients.</p>
-                <p>As a seasoned professional, Lara is committed to delivering excellence through a combination of expertise, experience, and cutting-edge strategies. She is proficient in both Swedish and English languages, allowing her to serve a diverse clientele.</p>
-                <p>We founded Legora with the mission of changing how professionals work. Millions of professionals dedicate their lives to solving their clients\' and companies\' most pressing problems. It became our calling to help them achieve these missions faster, with even greater impact.</p>');
+                $about_content = get_theme_mod('about_content', "<p>With two decades of experience in spearheading transformative change initiatives across Europe, Australia and South Africa, I am dedicated to driving organizational success through effective change management strategies. Ex Microsoft, Oracle, Ericsson, Janssen and 2 startups. I have worked with customers in public & private sectors.</p>
+                <p>I am passionate about empowering organizations to embrace change as a strategic advantage and thrive in today's dynamic business environment. With a strong foundation in sales, B2B marketing, leadership, and customer success I am committed to helping organisations achieve their goals, create a growth mindset and unlock their full potential.</p>
+                <p>Prosci Change Management certified and 3 sectors of experience, Health/Pharma, IT and Telco.
+                Let’s discuss how I can support your next transformation program. Let’s go!</p>");
                 echo wp_kses_post($about_content);
                 ?>
                 <a href="<?php echo esc_url(get_theme_mod('about_button_url', '/contact')); ?>" class="btn"><?php echo esc_html(get_theme_mod('about_button_text', 'Get in Touch')); ?></a>
