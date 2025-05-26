@@ -1,6 +1,9 @@
 # FreneticFocus WordPress Theme
 
-![FreneticFocus Banner](images/banner-placeholder.png)
+![image](https://github.com/user-attachments/assets/86852657-650e-4fb8-95a1-ae0b3eb2aa61)
+
+LIVE SITE : https://www.freneticfocus.com/ 
+ 
 
 ## 📌 About the Project
 
