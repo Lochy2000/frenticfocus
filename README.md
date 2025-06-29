@@ -6,22 +6,22 @@
 LIVE SITE : https://www.freneticfocus.com/ 
  
 
-## 📌 About the Project
+##  About the Project
 
 FreneticFocus is a custom WordPress theme designed for comprehensive management services. This theme is built with **PHP**, **CSS**, and **JavaScript**, following modern best practices.
 
-### 🌟 Features
-- 🎨 Custom design with **Lora & Poppins** fonts.
-- 🎭 Supports **custom backgrounds, menus, and logos**.
-- 📸 Optimized for **featured images** and **WordPress galleries**.
-- 📝 Translation-ready with **text domain support**.
-- 🏎️ Smooth scrolling and dynamic header interactions.
+###  Features
+-  Custom design with **Lora & Poppins** fonts.
+-  Supports **custom backgrounds, menus, and logos**.
+-  Optimized for **featured images** and **WordPress galleries**.
+-  Translation-ready with **text domain support**.
+-  Smooth scrolling and dynamic header interactions.
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
-### 📥 Installation
+###  Installation
 
 1. **Download or Clone** the repository:
    ```sh
@@ -57,8 +57,8 @@ FreneticFocus is a custom WordPress theme designed for comprehensive management 
     ├── images/          # Theme assets & placeholders
 
 
-## 🎨 Customization
-### 🖌️ Styling
+##  Customization
+### 🖌 Styling
 
 To customize theme styles:
 
