@@ -1,4 +1,5 @@
-# FreneticFocus WordPress Theme
+# FreneticFocus WordPress Theme![image](https://github.com/user-attachments/assets/05f957ba-9a81-42ac-86d3-296b51b52afe)
+
 
 ![image](https://github.com/user-attachments/assets/86852657-650e-4fb8-95a1-ae0b3eb2aa61)
 
